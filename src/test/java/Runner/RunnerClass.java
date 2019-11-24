@@ -8,6 +8,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 
         features = "src\\test\\java\\FeautureFiles\\Admissions",
+
         glue = "StepDefinition")
 
 public class RunnerClass {
