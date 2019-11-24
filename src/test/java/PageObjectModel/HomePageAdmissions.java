@@ -1,4 +1,6 @@
 package PageObjectModel;
 
-public class HomePageAdmissions {
+import Common.Base;
+
+public class HomePageAdmissions  {
 }

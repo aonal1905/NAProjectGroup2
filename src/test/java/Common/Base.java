@@ -3,6 +3,7 @@ package Common;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -16,10 +17,12 @@ public class Base {
         prop = new Properties();
         FileInputStream fis = new FileInputStream("C:\\Users\\Ahmet\\IdeaProjects\\Projectgroup2\\src\\test\\java\\Common\\Global.Properties");
         prop.load(fis);
-       // System.setProperty("webdriver.chrome.driver","C:\\Users\\Ahmet\\Downloads\\chromedriver_win32 (3)\\chromedriver.exe");
+
 
         WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
         driver.get(prop.getProperty("urlcampuslife"));
+        driver.manage().window().maximize();
         return driver;
 
 
