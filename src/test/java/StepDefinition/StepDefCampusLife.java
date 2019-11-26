@@ -32,8 +32,6 @@ public class StepDefCampusLife  extends Base {
         driver.close();
 
 
-
-
     }
 
     @When("^I click on Student organization button$")
@@ -70,4 +68,40 @@ public class StepDefCampusLife  extends Base {
         cam.getHandBook().click();
         driver.close();
     }
+
+    @Then("^I click on parking enforcement$")
+    public void i_click_on_parking_enforcement() throws Throwable {
+        cam.getParking().click();
+    }
+
+    @And("^I should able to see the parking enforcement title$")
+    public void i_should_able_to_see_the_parking_enforcement_title() throws Throwable {
+        String title = driver.getTitle();
+        Assert.assertEquals("NAU Parking & Transportation Policy - North American University", title);
+    }
+
+    @Then("^I click on campus security$")
+    public void i_click_on_campus_security() throws Throwable {
+        cam.getSecurity().click();
+    }
+
+    @And("^I should able to see the campus security title$")
+    public void i_should_able_to_see_the_campus_security_title() throws Throwable {
+        String title = driver.getTitle();
+        Assert.assertEquals("NAU Campus Security - North American University", title);
+    }
+
+    @Then("^I click on campus crime report$")
+    public void i_click_on_campus_crime_report() throws Throwable {
+        cam.getCrime().click();
+
+    }
+
+    @And("^I should able to see the campus crime report title$")
+    public void i_should_able_to_see_the_campus_crime_report_title() throws Throwable {
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println(currentUrl);
+
+    }
+
 }
