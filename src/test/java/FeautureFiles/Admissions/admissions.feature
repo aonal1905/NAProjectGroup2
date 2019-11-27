@@ -1,7 +1,7 @@
 
 Feature: Admissions Page Features
 
-  @test
+  @run
   Scenario: As a user when Customer click at the “Apply Now” button at the drop down
   menu under the “Graduate” tab Customer should be
   able to navigate to “apply home page” and start my application.
@@ -61,7 +61,7 @@ Feature: Admissions Page Features
     Given User is on the HomePage NAU
     When Customer hover over mouse to Admissions Menu
     And Customer click International button under Graduate section
-    Then Customer should see "International Students" page
+    Then Customer should see "International" page
 
 
   @test
@@ -73,5 +73,5 @@ Feature: Admissions Page Features
     Given User is on the HomePage NAU
     When Customer hover over mouse to Admissions Menu
     And Customer click Tuition and Fees button under Graduate section
-    Then Customer should see "Tuition and Fees" pages
+    Then Customer should see "Tuition" page
 

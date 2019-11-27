@@ -1,15 +1,15 @@
 package StepDefinition;
 
-import Common.Base;
-import PageObjectModel.HomePageAdmissions;
-import cucumber.api.PendingException;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.And;
-import cucumber.api.junit.Cucumber;
-import org.junit.Assert;
-import org.junit.runner.RunWith;
+        import Common.Base;
+        import PageObjectModel.HomePageAdmissions;
+        import cucumber.api.PendingException;
+        import cucumber.api.java.en.Given;
+        import cucumber.api.java.en.When;
+        import cucumber.api.java.en.Then;
+        import cucumber.api.java.en.And;
+        import cucumber.api.junit.Cucumber;
+        import org.junit.Assert;
+        import org.junit.runner.RunWith;
 
 
 public class StepDefAdmissions extends Base {
@@ -106,17 +106,8 @@ public class StepDefAdmissions extends Base {
     @And("^Customer click International button under Graduate section$")
     public void customer_click_international_button_under_graduate_section() throws Throwable {
         homePageAdmissions = new HomePageAdmissions();
-        homePageAdmissions.getAdmissionGrauteTutionAndFees().click();
+        homePageAdmissions.getAdmissionGraduateInternational().click();
     }
-
-    @Then("^Customer should see \"([^\"]*)\" page$")
-    public void customer_should_see_something_page(String strArg1) throws Throwable {
-    String title = driver.getTitle();
-        System.out.println(title);
-        Assert.assertEquals("International - North American University",title);
-
-
-}
 
     @And("^Customer click Tuition and Fees button under Graduate section$")
     public void customer_click_tuition_and_fees_button_under_graduate_section() throws Throwable {
@@ -125,12 +116,13 @@ public class StepDefAdmissions extends Base {
         Thread.sleep(2000);
     }
 
-    @Then("^Customer should see \"([^\"]*)\" pages$")
-    public void customer_should_see_something_pages(String strArg1) throws Throwable {
+    @Then("^Customer should see \"([^\"]*)\" page$")
+    public void customer_should_see_something_page(String strArg1) throws Throwable {
         String title = driver.getTitle();
         System.out.println(title);
-        Assert.assertEquals("Tuition and Fees - North American University", title);
-        Thread.sleep(2000);
+
+        Assert.assertTrue(title.contains(strArg1));
+        Thread.sleep(500);
     }
 }
 

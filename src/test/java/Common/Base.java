@@ -18,10 +18,12 @@ public class Base {
         FileInputStream fis = new FileInputStream("/Users/mehmetakin/IdeaProjects/NAProjectGroup2/src/test/java/Common/Global.Properties");
         prop.load(fis);
 
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
-        driver.get(prop.getProperty("urladmission"));
-        driver.manage().window().maximize();
+
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            driver.get(prop.getProperty("urladmission"));
+            driver.manage().window().maximize();
+
         return driver;
 
 
