@@ -21,6 +21,7 @@ public class Base {
 
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
+        driver.get(prop.getProperty("urlnau"));
         driver.get(prop.getProperty("urlstudents"));
         driver.manage().window().maximize();
         return driver;
