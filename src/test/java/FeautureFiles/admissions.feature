@@ -1,7 +1,7 @@
 
 Feature: Admissions Page Features
 
-  @run
+  @test
   Scenario: As a user when Customer click at the “Apply Now” button at the drop down
   menu under the “Graduate” tab Customer should be
   able to navigate to “apply home page” and start my application.
@@ -11,6 +11,8 @@ Feature: Admissions Page Features
     And Customer click Apply Now button under Graduate section
     Then Customer should be in the "NAU admissions" page
     And Customer should see Apply and "SignIn" Button
+
+
 
   @test
   Scenario: As a user, when Customer hover over the Admissions tab under the NAU Logo on the NAU Home Page,

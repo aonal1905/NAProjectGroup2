@@ -45,7 +45,8 @@ public class StepDefAdmissions extends Base {
     @And("^Customer should see Apply and \"([^\"]*)\" Button$")
     public void customer_should_see_apply_and_something_button(String strArg1) throws Throwable {
         String title = driver.getTitle();
-        System.out.println(title);
+        System.out.println(title+ "aaaa");
+
         Assert.assertEquals("Apply North American University", title);
     }
 
